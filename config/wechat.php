@@ -9,7 +9,7 @@
 return [
     'wx_config' => [
         'app_id' => 'wxcc953a81e7093534',
-        'secret' => '823b91c876c2be1b3f9ea7799dc5c64d',
+        'secret' => '4bd6aae141fe587ab65983027ee4b4ae',
         'token' => 'wechatProject',
         'log' => [],
         'oauth' => [],
