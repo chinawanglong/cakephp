@@ -62,4 +62,11 @@ class MyWechatComponent  extends Component
         });
     }
 
+    public function join(){
+        $response = $this->app->serve();
+        // 响应微信服务器
+        $response->send();
+        exit();
+    }
+
 }

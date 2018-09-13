@@ -21,4 +21,11 @@ class WechatController  extends AppController
     public function index(){
         $this->MyWechat->index();
     }
+
+    /**
+     * 接入微信公众号
+     */
+    public function join(){
+        $this->MyWechat->join();
+    }
 }
