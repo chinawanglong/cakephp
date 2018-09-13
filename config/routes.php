@@ -77,3 +77,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
+
+// wechat
+Router::scope('/wc', function (RouteBuilder $route){
+    $route->connect('/', ['controller' => 'wechat', 'action'=>'index']);
+    $route->connect('/join', ['controller' => 'wechat', 'action'=>'join']);
+});
+
