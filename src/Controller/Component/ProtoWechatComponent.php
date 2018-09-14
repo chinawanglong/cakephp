@@ -83,7 +83,7 @@ class ProtoWechatComponent  extends Component
         $timestamp = $_GET['timestamp'];
         $nonce = $_GET['nonce'];
 
-        $tmpArr = array($this->getToken(), $timestamp, $nonce);
+        $tmpArr = array($timestamp, $nonce, $this->getToken());
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode($tmpArr);
         $tmpStr = sha1($tmpStr);
