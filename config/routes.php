@@ -80,7 +80,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 
 // wechat
 Router::scope('/wx', function (RouteBuilder $route){
-//    $route->connect('/', ['controller' => 'wechat', 'action'=>'index']);
-    $route->connect('/', ['controller' => 'Index', 'action'=>'index']);
+    $route->connect('/', ['controller' => 'wechat', 'action'=>'index']);
+//    $route->connect('/', ['controller' => 'Index', 'action'=>'index']);
+//    $route->connect('/', ['controller' => 'Wechat', 'action'=>'join']);
 });
 

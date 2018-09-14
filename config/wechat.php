@@ -8,9 +8,11 @@
 
 return [
     'wx_config' => [
+        'debug' => true,
         'app_id' => 'wxcc953a81e7093534',
         'secret' => '4bd6aae141fe587ab65983027ee4b4ae',
         'token' => 'wanglongtest',
+        'aes_key' => 'EzTBs4ZuPBf7IWmDIQLwyAQli8deBdLR889rORjsC9t',
         'log' => [
             'level' => 'debug',
             'file' => '/tmp/oauth_callback',

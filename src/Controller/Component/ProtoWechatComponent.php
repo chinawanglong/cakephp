@@ -79,24 +79,24 @@ class ProtoWechatComponent  extends Component
     }
 
     public function checkSignature(){
-        $signature = $_GET['signature'];
+        ini_set('data.timezone', 'Asia/shanghai');
         $timestamp = $_GET['timestamp'];
         $nonce = $_GET['nonce'];
+        $signature = $_GET['signature'];
 
         $tmpArr = array($timestamp, $nonce, $this->getToken());
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode($tmpArr);
         $tmpStr = sha1($tmpStr);
 
-        $file = fopen(__DIR__.'/wechat.log', 'w') or die("unable to open file!");
-        fwrite($file, $this->getToken());
-        fwrite($file, $tmpStr);
-        fwrite($file, $signature);
+        $file = fopen(__DIR__.'/wechat.log', 'a') or die("unable to open file!");
+        $text = "\r\n time:".date('Y-m-d H:i:s',time())."\r\n token:".$this->getToken()."\r\n temStr:".$tmpStr."\r\n signature:".$signature."\r\n echoStr:".$_GET['echostr']."\r\n nonce:".$nonce."\r\n timestamp:".$timestamp;
+        fwrite($file, $text);
+        fclose($file);
 
         if ($signature == $tmpStr){
-            return true;
-        } else {
-            return false;
+            echo $_GET['echostr'];
+            exit();
         }
     }
     

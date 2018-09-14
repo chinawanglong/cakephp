@@ -27,5 +27,11 @@ class WechatController  extends AppController
      */
     public function join(){
         $this->MyWechat->join();
+//        $getData = "get:".$_GET;
+//        $file = fopen(__DIR__.'/Component/wechat.log', 'w') or die("unable to open the file!");
+//        fwrite($file, $getData);
+//        fclose($file);
+//        $this->loadComponent('ProtoWechat');
+//        $this->ProtoWechat->checkSignature();
     }
 }

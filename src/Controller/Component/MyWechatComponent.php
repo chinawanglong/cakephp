@@ -43,6 +43,11 @@ class MyWechatComponent  extends Component
             } else {
                 switch ($message->MsgType){
                     case 'text':    // 文本消息
+                        switch ($message->Conent){
+                            case 'info':
+                                return 'hello';
+                                break;
+                        }
                         break;
                     case 'image':   // 图片消息
                         break;
