@@ -88,6 +88,11 @@ class ProtoWechatComponent  extends Component
         $tmpStr = implode($tmpArr);
         $tmpStr = sha1($tmpStr);
 
+        $file = fopen(__DIR__.'/wechat.log', 'w') or die("unable to open file!");
+        fwrite($file, $this->getToken());
+        fwrite($file, $tmpStr);
+        fwrite($file, $signature);
+
         if ($signature == $tmpStr){
             return true;
         } else {
