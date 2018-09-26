@@ -11,7 +11,7 @@ return [
         'debug' => true,
         'app_id' => 'wxcc953a81e7093534',
         'secret' => '4bd6aae141fe587ab65983027ee4b4ae',
-        'token' => 'wanglongtest',
+        'token' => 'programTest',
         'log' => [
             'level' => 'debug',
             'file' => '/tmp/oauth_callback',

@@ -71,7 +71,6 @@ class MyWechatComponent  extends Component
     public function join(){
         $app = $this->application;
         $response = $app->server->serve();
-
         // 响应微信服务器
         $response->send();
         exit();
